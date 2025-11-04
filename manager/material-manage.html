@@ -109,7 +109,7 @@
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 48 48" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>materials</title>
+                                <title>client</title>
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF"
                                         fill-rule="nonzero">
@@ -127,7 +127,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <span class="nav-link-text ms-1">Manage Materials</span>
+                        <span class="nav-link-text ms-1">Client & Materials</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -294,10 +294,10 @@
                             <a class="opacity-5 text-dark" href="javascript:;">Manager</a>
                         </li>
                         <li class="breadcrumb-item text-sm text-dark active" aria-current="page">
-                            Materials
+                            Manage Clients & Materials
                         </li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">All Materials</h6>
+                    <h6 class="font-weight-bolder mb-0">All Clients & Materials</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -459,32 +459,35 @@
                                                             <th class="text-xs text-secondary">
                                                                 Material Name
                                                             </th>
-                                                            <th class="text-xs text-secondary">Units</th>
                                                             <th class="text-xs text-secondary">
-                                                                Quantity (KG)
+                                                                Quantity
                                                             </th>
                                                             <th class="text-xs text-secondary">
-                                                                Paint Use (Name)
+                                                                Paint Name - Code
                                                             </th>
                                                             <th class="text-xs text-secondary">
-                                                                Paint Quantity
+                                                                Paint Use (qty)
                                                             </th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td class="text-xs">Iron Rod</td>
-                                                            <td class="text-xs">10</td>
-                                                            <td class="text-xs">250</td>
-                                                            <td class="text-xs">Red Oxide</td>
-                                                            <td class="text-xs">5L</td>
+                                                            <td class="text-xs">Iron Rod(MS)</td>
+                                                            <td class="text-xs">250 KG</td>
+                                                            <td class="text-xs">
+                                                                <p class="m-0 text-xs">Red Oxide</p>
+                                                                <p class="m-0 text-xs fw-bolder">RAL-334</p>
+                                                            </td>
+                                                            <td class="text-xs">32 KG</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-xs">Cement</td>
-                                                            <td class="text-xs">20</td>
-                                                            <td class="text-xs">400</td>
-                                                            <td class="text-xs">White Paint</td>
-                                                            <td class="text-xs">3L</td>
+                                                            <td class="text-xs">Cement(MS)</td>
+                                                            <td class="text-xs">400 Nos</td>
+                                                            <td class="text-xs">
+                                                                <p class="m-0 text-xs">Red Oxide</p>
+                                                                <p class="m-0 text-xs fw-bolder">RAL-334</p>
+                                                            </td>
+                                                            <td class="text-xs">32 KG</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -550,7 +553,7 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label class="form-label">Mobile</label>
-                                    <input type="text" class="form-control" name="mobile" required>
+                                    <input type="number" class="form-control" name="mobile" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Email</label>
@@ -564,17 +567,27 @@
                             <!-- Dynamic Material Details Section -->
                             <div id="material-details-container">
                                 <div class="row g-2 material-row mb-2">
-                                    <div class="col-md-2">
+                                    <div class="col-md-1">
+                                        <select name="materials[0][type]" class="form-select" required>
+                                            <option value="">Type</option>
+                                            <option value="MS">MS</option>
+                                            <option value="ALU">ALU</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
                                         <input type="text" name="materials[0][name]" class="form-control"
                                             placeholder="Material Name" required>
                                     </div>
                                     <div class="col-md-2">
-                                        <input type="text" name="materials[0][units]" class="form-control"
-                                            placeholder="Units" required>
+                                        <input type="number" name="materials[0][quantity]" class="form-control"
+                                            placeholder="Quantity" required>
                                     </div>
                                     <div class="col-md-2">
-                                        <input type="number" name="materials[0][quantity]" class="form-control"
-                                            placeholder="Quantity (KG)" required>
+                                        <select name="materials[0][units]" class="form-select" required>
+                                            <option value="">Select Unit</option>
+                                            <option value="KG">KG</option>
+                                            <option value="Nos">Nos</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-3">
                                         <select name="materials[0][paint_use]" class="form-select" required>
@@ -583,10 +596,6 @@
                                             <option value="White Paint">White Paint</option>
                                             <option value="Black Enamel">Black Enamel</option>
                                         </select>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="text" name="materials[0][paint_quantity]" class="form-control"
-                                            placeholder="Paint Qty" required>
                                     </div>
                                     <div class="col-md-1 d-flex align-items-center">
                                         <button type="button" class="btn btn-success btn-sm add-material-row">
@@ -649,6 +658,13 @@
                             <!-- Dynamic Material Details Section -->
                             <div id="material-details-container">
                                 <div class="row g-2 material-row mb-2">
+                                    <div class="col-md-1">
+                                        <select name="materials[0][type]" class="form-select" required>
+                                            <option value="">Type</option>
+                                            <option value="MS">MS</option>
+                                            <option value="ALU">ALU</option>
+                                        </select>
+                                    </div>
                                     <div class="col-md-2">
                                         <input type="text" name="materials[0][name]" class="form-control"
                                             placeholder="Material Name" required>
@@ -657,7 +673,7 @@
                                         <input type="text" name="materials[0][units]" class="form-control"
                                             placeholder="Units" required>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <input type="number" name="materials[0][quantity]" class="form-control"
                                             placeholder="Quantity (KG)" required>
                                     </div>
@@ -668,10 +684,6 @@
                                             <option value="White Paint">White Paint</option>
                                             <option value="Black Enamel">Black Enamel</option>
                                         </select>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="text" name="materials[0][paint_quantity]" class="form-control"
-                                            placeholder="Paint Qty" required>
                                     </div>
                                     <div class="col-md-1 d-flex align-items-center">
                                         <button type="button" class="btn btn-success btn-sm add-material-row">
@@ -742,7 +754,7 @@
             let materialIndex = 1;
 
             document.addEventListener('click', function (e) {
-                // Add Row
+                // Add Material Row
                 if (e.target.closest('.add-material-row')) {
                     e.preventDefault();
                     const container = document.getElementById('material-details-container');
@@ -750,37 +762,48 @@
                     newRow.classList.add('row', 'g-2', 'material-row', 'mb-2');
 
                     newRow.innerHTML = `
-        <div class="col-md-2">
-          <input type="text" name="materials[${materialIndex}][name]" class="form-control" placeholder="Material Name" required>
-        </div>
-        <div class="col-md-2">
-          <input type="text" name="materials[${materialIndex}][units]" class="form-control" placeholder="Units" required>
-        </div>
-        <div class="col-md-2">
-          <input type="number" name="materials[${materialIndex}][quantity]" class="form-control" placeholder="Quantity (KG)" required>
-        </div>
-        <div class="col-md-3">
-          <select name="materials[${materialIndex}][paint_use]" class="form-select" required>
-            <option value="">Select Paint</option>
-            <option value="Red Oxide">Red Oxide</option>
-            <option value="White Paint">White Paint</option>
-            <option value="Black Enamel">Black Enamel</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <input type="text" name="materials[${materialIndex}][paint_quantity]" class="form-control" placeholder="Paint Qty" required>
-        </div>
-        <div class="col-md-1 d-flex align-items-center">
-          <button type="button" class="btn btn-danger btn-sm remove-material-row">
-            <i class="fa fa-times"></i>
-          </button>
-        </div>
-      `;
+                    <div class="col-md-1">
+                                        <select name="materials[0][type]" class="form-select" required>
+                                            <option value="">Type</option>
+                                            <option value="MS">MS</option>
+                                            <option value="ALU">ALU</option>
+                                        </select>
+                                    </div>
+          <div class="col-md-3">
+            <input type="text" name="materials[${materialIndex}][name]" class="form-control"
+                   placeholder="Material Name" required>
+          </div>
+          <div class="col-md-2">
+            <input type="number" name="materials[${materialIndex}][quantity]" class="form-control"
+                   placeholder="Quantity" required>
+          </div>
+          <div class="col-md-2">
+            <select name="materials[${materialIndex}][units]" class="form-select" required>
+              <option value="">Select Unit</option>
+              <option value="KG">KG</option>
+              <option value="Nos">Nos</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select name="materials[${materialIndex}][paint_use]" class="form-select" required>
+              <option value="">Select Paint</option>
+              <option value="Red Oxide">Red Oxide</option>
+              <option value="White Paint">White Paint</option>
+              <option value="Black Enamel">Black Enamel</option>
+            </select>
+          </div>
+          <div class="col-md-1 d-flex align-items-center">
+            <button type="button" class="btn btn-danger btn-sm remove-material-row">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+        `;
+
                     container.appendChild(newRow);
                     materialIndex++;
                 }
 
-                // Remove Row
+                // Remove Material Row
                 if (e.target.closest('.remove-material-row')) {
                     e.preventDefault();
                     e.target.closest('.material-row').remove();

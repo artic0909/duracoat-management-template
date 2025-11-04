@@ -108,7 +108,7 @@
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 48 48" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>materials</title>
+                                <title>client</title>
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF"
                                         fill-rule="nonzero">
@@ -126,7 +126,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <span class="nav-link-text ms-1">Manage Materials</span>
+                        <span class="nav-link-text ms-1">Client & Materials</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -465,18 +465,19 @@
                                                     class="text-secondary text-xs font-weight-bold">+91-9087765477</span>
                                             </td>
                                             <td class="align-middle text-center">
-                                                <span class="text-white badge badge-sm bg-gradient-info text-xs font-weight-bold">7</span>
+                                                <span
+                                                    class="text-white badge badge-sm bg-gradient-info text-xs font-weight-bold">7</span>
                                             </td>
                                             <td class="align-middle text-center text-sm">
                                                 <div class="d-flex gap-2 justify-content-center">
                                                     <a href="add-jobcard.html"
                                                         class="btn btn-primary px-3 py-2 rounded m-0">
-                                                        <i class="fa fa-plus"></i>
+                                                        <i class="fa fa-plus"></i> Add Jobcard
                                                     </a>
 
                                                     <a href="view-jobcard-details.html"
                                                         class="btn btn-success px-3 py-2 rounded m-0">
-                                                        <i class="fa fa-eye"></i>
+                                                        <i class="fa fa-eye"></i> View
                                                     </a>
                                                 </div>
                                             </td>
@@ -530,6 +531,7 @@
                                     </select>
                                 </div>
                             </div>
+
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">Client Name</label>
@@ -548,13 +550,20 @@
                                     <input type="text" name="" class="form-control" id="" readonly />
                                 </div>
                             </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Enter Order Number</label>
+                                    <input type="text" name="" class="form-control" id="" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             Close
                         </button>
-                        <button type="button" class="btn btn-success">Create Process</button>
+                        <button type="button" class="btn btn-primary">Create Order</button>
                     </div>
                 </form>
             </div>
@@ -599,13 +608,20 @@
                                     <input type="text" name="" class="form-control" id="" readonly />
                                 </div>
                             </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Enter Order Number</label>
+                                    <input type="text" name="" class="form-control" id="" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             Close
                         </button>
-                        <button type="button" class="btn btn-info">Update Process</button>
+                        <button type="button" class="btn btn-info">Update Order</button>
                     </div>
                 </form>
             </div>

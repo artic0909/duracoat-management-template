@@ -108,7 +108,7 @@
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 48 48" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>materials</title>
+                                <title>client</title>
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF"
                                         fill-rule="nonzero">
@@ -126,7 +126,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <span class="nav-link-text ms-1">Manage Materials</span>
+                        <span class="nav-link-text ms-1">Client & Materials</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -410,15 +410,15 @@
                                 <h6 class="font-weight-bolder mb-0">Client's Details:</h6>
                                 <div class="row mb-3">
                                     <div class="col-md-4">
-                                        <label class="form-label">Client Name</label>
+                                        <label class="form-label">Client Name<span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" readonly>
                                     </div>
                                     <div class="col-md-4">
-                                        <label class="form-label">Client Email</label>
+                                        <label class="form-label">Client Email<span class="text-danger">*</span></label>
                                         <input type="email" class="form-control" readonly>
                                     </div>
                                     <div class="col-md-4">
-                                        <label class="form-label">Mobile</label>
+                                        <label class="form-label">Mobile<span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" readonly>
                                     </div>
                                 </div>
@@ -427,28 +427,26 @@
                                 <h6 class="font-weight-bolder mb-0">Create Jobcard:</h6>
                                 <div class="row mb-3">
                                     <div class="col-md-4">
-                                        <label class="form-label">Date</label>
+                                        <label class="form-label">Date<span class="text-danger">*</span></label>
                                         <input type="date" class="form-control">
                                     </div>
+
                                     <div class="col-md-4">
-                                        <label class="form-label">Order No.</label>
-                                        <input type="text" class="form-control" placeholder="Enter Order No.">
+                                        <label class="form-label">Order No.<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Enter Order No." readonly>
                                     </div>
                                     <div class="col-md-4">
-                                        <label class="form-label">Material Type</label>
-                                        <select class="form-select">
-                                            <option value="">Select Type</option>
-                                            <option value="MS">MS</option>
-                                            <option value="ALU">ALU</option>
-                                        </select>
+                                        <label class="form-label">Jobcard No.<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Enter Order No.">
                                     </div>
                                 </div>
 
                                 <!-- Row 3 -->
                                 <div class="row mb-3">
                                     <div class="col-md-12">
-                                        <label class="form-label">Product/ Material Description</label>
-                                        <div class="border rounded p-2" style="max-height: 120px; overflow-y: auto;">
+                                        <label class="form-label">Product/ Material Description<span
+                                                class="text-danger">*</span></label>
+                                        <div class="border rounded p-2" style="max-height: 220px; overflow-y: auto;">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="material1"
                                                     id="mat1">
@@ -473,68 +471,39 @@
                                     </div>
                                 </div>
 
-                                <!-- Row 4 -->
+                                <!-- Dynamic Row 4 -->
                                 <div class="row mb-3">
-                                    <div class="col-md-2">
-                                        <label class="form-label">Product Unit</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="form-label">Product Quantity(KG)</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Paint Code(RAL)</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Paint Name</label>
-                                        <input type="text" class="form-control">
+                                    <div class="col-md-1">
+                                        <label class="form-label">Type<span class="text-danger">*</span></label>
+                                        <input type="text" value="MS" class="form-control" readonly>
                                     </div>
                                     <div class="col-md-2">
-                                        <label class="form-label">Paint Quantity(KG)</label>
+                                        <label class="form-label">Product Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" readonly>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Product Quantity<span
+                                                class="text-danger">*</span></label>
                                         <input type="text" class="form-control">
                                     </div>
-                                </div>
-
-                                <!-- Row 5 -->
-                                <div class="row mb-3">
-                                    <div class="col-md-3">
-                                        <label class="form-label">Pretreatment Date</label>
-                                        <input type="date" class="form-control">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Micron</label>
-                                        <input type="text" class="form-control" placeholder="Enter Micron">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Paint Apply Date</label>
-                                        <input type="date" class="form-control">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Job Card Prepared By</label>
-                                        <input type="text" class="form-control" placeholder="Prepared By">
-                                    </div>
-                                </div>
 
 
-                                <!-- Row 6 -->
-                                <div class="row mb-3">
-                                    <div class="col-md-3">
-                                        <label class="form-label">QC Sign</label>
-                                        <input type="text" class="form-control" placeholder="QC Sign">
+                                    <div class="col-md-1">
+                                        <label class="form-label">Product Unit<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" readonly>
                                     </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Mistree Signature</label>
-                                        <input type="text" class="form-control" placeholder="Mistree Signature">
+                                    <div class="col-md-2">
+                                        <label class="form-label">Paint Code(RAL)<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" readonly>
                                     </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Supervisor Signature</label>
-                                        <input type="text" class="form-control" placeholder="Supervisor Signature">
+                                    <div class="col-md-2">
+                                        <label class="form-label">Paint Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" readonly>
                                     </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Material Delivery Date</label>
-                                        <input type="date" class="form-control">
+                                    <div class="col-md-2">
+                                        <label class="form-label">Paint Used(Qty)</label>
+                                        <input type="number" class="form-control" placeholder="KG">
                                     </div>
                                 </div>
 
