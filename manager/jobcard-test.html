@@ -157,6 +157,34 @@
                     </a>
                 </li>
 
+                                <li class="nav-item">
+                    <a class="nav-link" href="all-jobcards.html">
+                        <div
+                            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <svg width="12px" height="12px" viewBox="0 0 48 48" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>jobcards</title>
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF"
+                                        fill-rule="nonzero">
+                                        <g transform="translate(1716.000000, 291.000000)">
+                                            <g transform="translate(453.000000, 454.000000)">
+                                                <path class="color-background opacity-6"
+                                                    d="M40,8 L8,8 C5.79,8 4,9.79 4,12 L4,16 L44,16 L44,12 C44,9.79 42.21,8 40,8 Z">
+                                                </path>
+                                                <path class="color-background"
+                                                    d="M4,20 L4,36 C4,38.21 5.79,40 8,40 L40,40 C42.21,40 44,38.21 44,36 L44,20 L4,20 Z M16,32 L10,32 L10,26 L16,26 L16,32 Z M28,32 L22,32 L22,26 L28,26 L28,32 Z M38,32 L32,32 L32,26 L38,26 L38,32 Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <span class="nav-link-text ms-1">All Jobcards</span>
+                    </a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="material-out.html">
                         <div
@@ -509,30 +537,6 @@
                                                                     KG</span>
                                                             </td>
                                                         </tr>
-
-                                                        <tr>
-                                                            <td>
-                                                                <p class="m-0 text-secondary text-xs font-weight-bold">
-                                                                    Window Frame</p>
-                                                                <p class="m-0 text-secondary text-xs font-weight-bold">
-                                                                    120 KG</p>
-                                                                <p class="m-0 text-secondary text-xs font-weight-bold">
-                                                                    ALU</p>
-                                                            </td>
-                                                            <td>
-                                                                <span
-                                                                    class="badge bg-gradient-info text-white text-xs font-weight-bold">RAL-344</span>
-                                                            </td>
-                                                            <td>
-                                                                <span
-                                                                    class="text-secondary text-xs font-weight-bold">Red
-                                                                    Color</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="text-secondary text-xs font-weight-bold">12
-                                                                    KG</span>
-                                                            </td>
-                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
@@ -540,11 +544,11 @@
 
                                             <td class="align-middle text-center">
                                                 <span class="text-secondary text-xs font-weight-bold">03/11/2025</span>
-                                                
+
                                             </td>
                                             <td class="align-middle text-center">
                                                 <span class="text-secondary text-xs font-weight-bold">03/11/2025</span>
-                                              
+
                                             </td>
                                         </tr>
                                     </tbody>
@@ -553,131 +557,148 @@
 
 
                             <!-- Testing Fields -->
-<div class="p-3">
-  <h6 class="fw-bolder mb-3">QC Testings:</h6>
+                            <div class="p-4">
+                                <h5 class="fw-bolder mb-2 text-primary">🧪 QC Testings & Results</h5>
 
-  <!-- 1. Cross Hatch Adhesion Test -->
-  <div class="card mb-3">
-    <div class="card-body p-3">
-      <h6 class="fw-bold mb-2">1. Cross Hatch Adhesion Test</h6>
-      <div class="row g-2 align-items-center">
-        <div class="col-md-4">
-          <label class="form-label mb-0">Adhesion Grade (GT0–GT5)</label>
-          <input type="text" class="form-control" id="adhesionInput" placeholder="e.g., GT1">
-        </div>
-        <div class="col-md-8">
-          <div id="adhesionResult" class="mt-2 text-secondary small">Enter a grade to check result.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+                                <!-- 1. Cross Hatch Adhesion Test -->
+                                <div class="card shadow-sm mb-3 border-0">
+                                    <div class="card-body">
+                                        <h6 class="fw-semibold mb-3 text-secondary">1️⃣ Cross Hatch Adhesion Test</h6>
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">Adhesion Grade (GT0–GT5)</label>
+                                                <input type="text" class="form-control" id="adhesionInput"
+                                                    placeholder="e.g., GT1">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <label class="form-label">Result</label>
+                                                <input type="text" class="form-control text-success fw-semibold"
+                                                    id="adhesionResult" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-  <!-- 2. Pencil Hardness Test -->
-  <div class="card mb-3">
-    <div class="card-body p-3">
-      <h6 class="fw-bold mb-2">2. Pencil Hardness Test</h6>
-      <div class="row g-2 align-items-center">
-        <div class="col-md-4">
-          <label class="form-label mb-0">Observed Hardness</label>
-          <input type="text" class="form-control" id="hardnessInput" placeholder="e.g., 2H">
-        </div>
-        <div class="col-md-8">
-          <div id="hardnessResult" class="mt-2 text-secondary small">Enter hardness to check result.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+                                <!-- 2. Pencil Hardness Test -->
+                                <div class="card shadow-sm mb-3 border-0">
+                                    <div class="card-body">
+                                        <h6 class="fw-semibold mb-3 text-secondary">2️⃣ Pencil Hardness Test</h6>
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">Observed Hardness</label>
+                                                <input type="text" class="form-control" id="hardnessInput"
+                                                    placeholder="e.g., 2H">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <label class="form-label">Result</label>
+                                                <input type="text" class="form-control text-success fw-semibold"
+                                                    id="hardnessResult" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-  <!-- 3. Impact Resistance Test -->
-  <div class="card mb-3">
-    <div class="card-body p-3">
-      <h6 class="fw-bold mb-2">3. Impact Resistance Test</h6>
-      <div class="row g-2 align-items-center">
-        <div class="col-md-4">
-          <label class="form-label mb-0">Result (kg·cm)</label>
-          <input type="number" class="form-control" id="impactInput" placeholder="e.g., 45">
-        </div>
-        <div class="col-md-8">
-          <div id="impactResult" class="mt-2 text-secondary small">Enter result to check acceptance.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+                                <!-- 3. Impact Resistance Test -->
+                                <div class="card shadow-sm mb-3 border-0">
+                                    <div class="card-body">
+                                        <h6 class="fw-semibold mb-3 text-secondary">3️⃣ Impact Resistance Test</h6>
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">Result (kg·cm)</label>
+                                                <input type="number" class="form-control" id="impactInput"
+                                                    placeholder="e.g., 45">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <label class="form-label">Acceptance</label>
+                                                <input type="text" class="form-control text-success fw-semibold"
+                                                    id="impactResult" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-  <!-- 4. Conical Mandrel Bend Test -->
-  <div class="card mb-3">
-    <div class="card-body p-3">
-      <h6 class="fw-bold mb-2">4. Conical Mandrel Bend Test</h6>
-      <div class="row g-2 align-items-center">
-        <div class="col-md-6">
-          <label class="form-label mb-0">Observation</label>
-          <input type="text" class="form-control" id="bendInput" placeholder="e.g., No cracks or detachment">
-        </div>
-        <div class="col-md-6">
-          <div id="bendResult" class="mt-2 text-secondary small">Enter observation to check result.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+                                <!-- 4. Conical Mandrel Bend Test -->
+                                <div class="card shadow-sm mb-3 border-0">
+                                    <div class="card-body">
+                                        <h6 class="fw-semibold mb-3 text-secondary">4️⃣ Conical Mandrel Bend Test</h6>
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">Observation</label>
+                                                <select class="form-select" id="bendInput">
+                                                    <option value="">Select Observation</option>
+                                                    <option value="No cracks or detachment">No cracks or detachment
+                                                    </option>
+                                                    <option value="Hairline cracks">Hairline cracks</option>
+                                                    <option value="Peeling or detachment">Peeling or detachment</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <label class="form-label">Result</label>
+                                                <input type="text" class="form-control text-success fw-semibold"
+                                                    id="bendResult" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-  <!-- 5. Cupping Test -->
-  <div class="card mb-3">
-    <div class="card-body p-3">
-      <h6 class="fw-bold mb-2">5. Cupping Test</h6>
-      <div class="row g-2 align-items-center">
-        <div class="col-md-4">
-          <label class="form-label mb-0">Depth (mm)</label>
-          <input type="number" class="form-control" id="cuppingInput" placeholder="e.g., 8">
-        </div>
-        <div class="col-md-8">
-          <div id="cuppingResult" class="mt-2 text-secondary small">Enter depth to check pass criteria.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+                                <!-- 5. Cupping Test -->
+                                <div class="card shadow-sm mb-3 border-0">
+                                    <div class="card-body">
+                                        <h6 class="fw-semibold mb-3 text-secondary">5️⃣ Cupping Test</h6>
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">Depth (mm)</label>
+                                                <input type="number" class="form-control" id="cuppingInput"
+                                                    placeholder="e.g., 8">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <label class="form-label">Result</label>
+                                                <input type="text" class="form-control text-success fw-semibold"
+                                                    id="cuppingResult" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-  <!-- 6. Gloss Measurement Test -->
-  <div class="card mb-3">
-    <div class="card-body p-3">
-      <h6 class="fw-bold mb-2">6. Gloss Measurement Test</h6>
-      <div class="row g-2 align-items-center">
-        <div class="col-md-4">
-          <label class="form-label mb-0">Finish Type</label>
-          <select id="glossType" class="form-select">
-            <option value="">Select</option>
-            <option value="Matt">Matt</option>
-            <option value="Semi-Gloss">Semi-Gloss</option>
-            <option value="Gloss">Gloss</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label class="form-label mb-0">Gloss Units (GU)</label>
-          <input type="number" class="form-control" id="glossInput" placeholder="e.g., 25">
-        </div>
-        <div class="col-md-4">
-          <div id="glossResult" class="mt-2 text-secondary small">Enter GU value to check range.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+                                <!-- 6. Gloss Measurement Test -->
+                                <div class="card shadow-sm mb-4 border-0">
+                                    <div class="card-body">
+                                        <h6 class="fw-semibold mb-3 text-secondary">6️⃣ Gloss Measurement Test</h6>
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">Finish Type</label>
+                                                <select id="glossType" class="form-select">
+                                                    <option value="">Select Type</option>
+                                                    <option value="Matt">Matt</option>
+                                                    <option value="Semi-Gloss">Semi-Gloss</option>
+                                                    <option value="Gloss">Gloss</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label">Gloss Units (GU)</label>
+                                                <input type="number" class="form-control" id="glossInput"
+                                                    placeholder="e.g., 25">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label">Result</label>
+                                                <input type="text" class="form-control text-success fw-semibold"
+                                                    id="glossResult" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-  <!-- 7. Powder Flowability Test -->
-  <div class="card mb-3">
-    <div class="card-body p-3">
-      <h6 class="fw-bold mb-2">7. Powder Flowability Test (In-house, 15 days)</h6>
-      <div class="row g-2 align-items-center">
-        <div class="col-md-4">
-          <label class="form-label mb-0">Flow Time (sec for 50g)</label>
-          <input type="number" class="form-control" id="flowInput" placeholder="e.g., 20">
-        </div>
-        <div class="col-md-8">
-          <div id="flowResult" class="mt-2 text-secondary small">Enter time to check flow quality.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+                                <!-- Submit Button -->
+                                <div class="text-end">
+                                    <a href="view-jobcard-details.html" class="btn btn-secondary shadow-sm">
+                                        <i class="fa-regular fa-circle-left me-2"></i>Back To Jobcards
+                                    </a>
 
-</div>
+                                    <button class="btn btn-primary shadow-sm" id="submitBtn">
+                                        <i class="fa fa-check-circle me-2"></i>Submit Results
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -707,69 +728,66 @@
     <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
 
 
-    <!-- JS for Auto Checking -->
-<script>
-  document.addEventListener('input', function () {
+    <!-- Modern JS Auto Checking -->
+    <script>
+        document.addEventListener('input', function () {
+            // 1️⃣ Cross Hatch Adhesion
+            const adhesion = document.getElementById('adhesionInput').value.trim().toUpperCase();
+            const adhesionResult = document.getElementById('adhesionResult');
+            adhesionResult.value =
+                adhesion.startsWith('GT0') ? '✅ PASS – Excellent adhesion' :
+                    adhesion.startsWith('GT1') ? '✅ Acceptable adhesion' :
+                        /GT[2-5]/.test(adhesion) ? '❌ FAIL – Poor adhesion' :
+                            '';
 
-    // 1. Cross Hatch
-    const adhesion = document.getElementById('adhesionInput').value.trim().toUpperCase();
-    const adhesionResult = document.getElementById('adhesionResult');
-    if (adhesion.startsWith('GT0')) adhesionResult.innerHTML = '✅ PASS – Excellent adhesion';
-    else if (adhesion.startsWith('GT1')) adhesionResult.innerHTML = '✅ Acceptable adhesion';
-    else if (/GT[2-5]/.test(adhesion)) adhesionResult.innerHTML = '❌ Fail – Poor adhesion';
-    else adhesionResult.innerHTML = 'Enter GT0–GT5';
+            // 2️⃣ Pencil Hardness
+            const hardness = document.getElementById('hardnessInput').value.trim().toUpperCase();
+            const hardnessResult = document.getElementById('hardnessResult');
+            if (!hardness) hardnessResult.value = '';
+            else if (['H', '2H', '3H', '4H'].includes(hardness)) hardnessResult.value = '✅ PASS – Meets hardness criteria';
+            else hardnessResult.value = '❌ FAIL – Below acceptable hardness';
 
-    // 2. Pencil Hardness
-    const hardness = document.getElementById('hardnessInput').value.trim().toUpperCase();
-    const hardnessResult = document.getElementById('hardnessResult');
-    if (!hardness) hardnessResult.innerHTML = 'Enter hardness value';
-    else if (['H', '2H', '3H', '4H'].includes(hardness)) hardnessResult.innerHTML = '✅ PASS – Meets hardness criteria';
-    else hardnessResult.innerHTML = '❌ Below acceptable hardness';
+            // 3️⃣ Impact Resistance
+            const impact = parseFloat(document.getElementById('impactInput').value);
+            const impactResult = document.getElementById('impactResult');
+            if (!isNaN(impact)) {
+                impactResult.value = impact >= 50 ? '✅ PASS – Meets architectural grade' :
+                    impact >= 40 ? '✅ Acceptable – General powder' :
+                        '❌ FAIL – Below standard';
+            } else impactResult.value = '';
 
-    // 3. Impact Resistance
-    const impact = parseFloat(document.getElementById('impactInput').value);
-    const impactResult = document.getElementById('impactResult');
-    if (!isNaN(impact)) {
-      if (impact >= 50) impactResult.innerHTML = '✅ PASS – Meets architectural grade';
-      else if (impact >= 40) impactResult.innerHTML = '✅ Acceptable – General powder';
-      else impactResult.innerHTML = '❌ Fail – Below standard';
-    }
+            // 4️⃣ Conical Mandrel Bend
+            const bend = document.getElementById('bendInput').value;
+            const bendResult = document.getElementById('bendResult');
+            if (!bend) bendResult.value = '';
+            else if (bend.includes('No cracks')) bendResult.value = '✅ PASS';
+            else if (bend.includes('Hairline')) bendResult.value = '⚠️ Acceptable';
+            else bendResult.value = '❌ FAIL';
 
-    // 4. Conical Mandrel Bend
-    const bend = document.getElementById('bendInput').value.toLowerCase();
-    const bendResult = document.getElementById('bendResult');
-    if (bend.includes('no crack') || bend.includes('no detachment')) bendResult.innerHTML = '✅ PASS';
-    else if (bend.includes('hairline')) bendResult.innerHTML = '⚠️ Acceptable';
-    else if (bend.includes('peel') || bend.includes('detach')) bendResult.innerHTML = '❌ Fail';
-    else bendResult.innerHTML = 'Enter observation details';
+            // 5️⃣ Cupping Test
+            const cup = parseFloat(document.getElementById('cuppingInput').value);
+            const cupResult = document.getElementById('cuppingResult');
+            if (!isNaN(cup)) cupResult.value = cup >= 8 ? '✅ PASS – Meets Duracoat standard' : '❌ FAIL – Below 8mm';
+            else cupResult.value = '';
 
-    // 5. Cupping Test
-    const cup = parseFloat(document.getElementById('cuppingInput').value);
-    const cupResult = document.getElementById('cuppingResult');
-    if (!isNaN(cup)) cupResult.innerHTML = cup >= 8 ? '✅ PASS – Meets Duracoat standard' : '❌ Fail – Below 8mm';
+            // 6️⃣ Gloss Measurement
+            const glossType = document.getElementById('glossType').value;
+            const glossValue = parseFloat(document.getElementById('glossInput').value);
+            const glossResult = document.getElementById('glossResult');
+            if (glossType && !isNaN(glossValue)) {
+                let pass = false;
+                if (glossType === 'Matt' && glossValue >= 10 && glossValue <= 30) pass = true;
+                if (glossType === 'Semi-Gloss' && glossValue >= 31 && glossValue <= 70) pass = true;
+                if (glossType === 'Gloss' && glossValue >= 71 && glossValue <= 95) pass = true;
+                glossResult.value = pass ? '✅ PASS – Within range' : '❌ FAIL – Out of range';
+            } else glossResult.value = '';
+        });
 
-    // 6. Gloss Measurement
-    const glossType = document.getElementById('glossType').value;
-    const glossValue = parseFloat(document.getElementById('glossInput').value);
-    const glossResult = document.getElementById('glossResult');
-    if (glossType && !isNaN(glossValue)) {
-      let pass = false;
-      if (glossType === 'Matt' && glossValue >= 10 && glossValue <= 30) pass = true;
-      if (glossType === 'Semi-Gloss' && glossValue >= 31 && glossValue <= 70) pass = true;
-      if (glossType === 'Gloss' && glossValue >= 71 && glossValue <= 95) pass = true;
-      glossResult.innerHTML = pass ? '✅ PASS – Within range' : '❌ Out of range';
-    }
-
-    // 7. Powder Flowability
-    const flow = parseFloat(document.getElementById('flowInput').value);
-    const flowResult = document.getElementById('flowResult');
-    if (!isNaN(flow)) {
-      if (flow <= 25) flowResult.innerHTML = '✅ Good flow';
-      else if (flow <= 40) flowResult.innerHTML = '⚠️ Moderate flow';
-      else flowResult.innerHTML = '❌ Poor – Possible orange peel issue';
-    }
-  });
-</script>
+        // Submit action (placeholder for backend)
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            alert('✅ QC Test results submitted successfully!');
+        });
+    </script>
 </body>
 
 </html>

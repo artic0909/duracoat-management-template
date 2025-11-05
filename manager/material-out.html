@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
-    <title>Add Jobcard</title>
+    <title>Material Out</title>
     <!-- Fonts and icons -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
@@ -130,7 +130,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="order-create.html">
+                    <a class="nav-link" href="order-create.html">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 48 48" version="1.1"
@@ -186,7 +186,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="material-out.html">
+                    <a class="nav-link active" href="material-out.html">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 48 48" version="1.1"
@@ -321,11 +321,10 @@
                             <a class="opacity-5 text-dark" href="javascript:;">Manager</a>
                         </li>
                         <li class="breadcrumb-item text-sm text-dark active" aria-current="page">
-                            Add Jobcards
+                            Material Out
                         </li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">Here you can create jobcards for each client</h6>
-                    <!-- <h5 class="font-weight-bolder mb-0">Client Name/ Email / Mobile</h5> -->
+                    <h6 class="font-weight-bolder mb-0">Here you can find all the ready for material out</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -432,116 +431,164 @@
                 <div class="col-12">
                     <div class="card mb-4">
                         <div class="card-body px-0 pt-0 pb-2">
-                            <form action="" class="m-4">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                SL
+                                            </th>
 
-                                <!-- Row 1 -->
-                                <h6 class="font-weight-bolder mb-0">Client's Details:</h6>
-                                <div class="row mb-3">
-                                    <div class="col-md-4">
-                                        <label class="form-label">Client Name<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label class="form-label">Client Email<span class="text-danger">*</span></label>
-                                        <input type="email" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label class="form-label">Mobile<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                </div>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Status
+                                            </th>
 
-                                <!-- Row 2 -->
-                                <h6 class="font-weight-bolder mb-0">Create Jobcard:</h6>
-                                <div class="row mb-3">
-                                    <div class="col-md-4">
-                                        <label class="form-label">Date<span class="text-danger">*</span></label>
-                                        <input type="date" class="form-control">
-                                    </div>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Ord No
+                                            </th>
 
-                                    <div class="col-md-4">
-                                        <label class="form-label">Order No.<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" placeholder="Enter Order No." readonly>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label class="form-label">Jobcard No.<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" placeholder="Enter Order No.">
-                                    </div>
-                                </div>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Jobcard Creation Date
+                                            </th>
 
-                                <!-- Row 3 -->
-                                <div class="row mb-3">
-                                    <div class="col-md-12">
-                                        <label class="form-label">Product/ Material Description<span
-                                                class="text-danger">*</span></label>
-                                        <div class="border rounded p-2" style="max-height: 220px; overflow-y: auto;">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="x" value="material1"
-                                                    id="mat1">
-                                                <label class="form-check-label" for="mat1">Metal Frame</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="x" value="material2"
-                                                    id="mat2">
-                                                <label class="form-check-label" for="mat2">Window Panel</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="x" value="material3"
-                                                    id="mat3">
-                                                <label class="form-check-label" for="mat3">Door Handle</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="x" value="material4"
-                                                    id="mat4">
-                                                <label class="form-check-label" for="mat4">Support Rod</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Jobcard No
+                                            </th>
 
-                                <!-- Dynamic Row 4 -->
-                                <div class="row mb-3">
-                                    <div class="col-md-1">
-                                        <label class="form-label">Type<span class="text-danger">*</span></label>
-                                        <input type="text" value="MS" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="form-label">Product Name<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="form-label">Product Quantity<span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control">
-                                    </div>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Product/ Material Description & Paints
+                                            </th>
 
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Pre-treatment Date
+                                            </th>
 
-                                    <div class="col-md-1">
-                                        <label class="form-label">Product Unit<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="form-label">Paint Code(RAL)<span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="form-label">Paint Name<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="form-label">Paint Used(Qty)</label>
-                                        <input type="number" class="form-control" placeholder="KG">
-                                    </div>
-                                </div>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Powder Apply Date
+                                            </th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Material Delivery Date
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
 
-                                <div class="d-flex justify-content-end">
-                                    <button type="submit" class="btn btn-primary">Create Jobcard</button>
-                                </div>
-                            </form>
+                                            <td>
+                                                <div class="d-flex px-2 py-1">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-sm">1</h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0 bg-success text-dark m-0 p-1">
+                                                    delivered</p>
+                                            </td>
+
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0">DC-001</p>
+                                            </td>
+
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0">03/11/2025</p>
+                                            </td>
+
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0">DC-JB-001</p>
+                                            </td>
+                                            <!-- nested table -->
+                                            <td>
+                                                <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                                    data-bs-target="#materialdetailsModal">
+                                                    Details View
+                                                </button>
+                                            </td>
+                                            <!-- nested table -->
+
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">03/11/2025</span>
+
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">03/11/2025</span>
+
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">03/11/2025</span>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+
+
+        <!-- Material Details Modal -->
+        <div class="modal fade" id="materialdetailsModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <form class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Details of Material</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered table-sm m-0 text-center align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th class="text-xs">Product / Material Description</th>
+                                    <th class="text-xs">Paint Code (RAL)</th>
+                                    <th class="text-xs">Paint Name</th>
+                                    <th class="text-xs">Paint Used (Qty)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p class="m-0 text-secondary text-xs font-weight-bold">
+                                            Window Frame</p>
+                                        <p class="m-0 text-secondary text-xs font-weight-bold">
+                                            120 KG</p>
+                                        <p class="m-0 text-secondary text-xs font-weight-bold">
+                                            ALU</p>
+                                    </td>
+                                    <td>
+                                        <span
+                                            class="badge bg-gradient-info text-white text-xs font-weight-bold">RAL-344</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-secondary text-xs font-weight-bold">Red
+                                            Color</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-secondary text-xs font-weight-bold">12
+                                            KG</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -566,6 +613,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
+
 </body>
 
 </html>
